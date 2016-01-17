@@ -94,21 +94,6 @@
     [self addChildViewController:vc3];
 }
 
-//- (void)setUpOneChildViewController:(NSUInteger)i
-//{
-//    CGFloat x = i * LG_ScreenW;
-//    
-//    UIViewController *vc = self.childViewControllers[i];
-//    
-//    if (vc.view.superview) {
-//        return;
-//    }
-//    vc.view.frame = CGRectMake(x, 0, LG_ScreenW, 300);
-//    
-//    [self.contentScrollView addSubview:vc.view];
-//    
-//}
-
 #pragma mark - UIScrollViewDelegate
 //实现LGSegment代理方法
 -(void)scrollToPage:(int)Page {
