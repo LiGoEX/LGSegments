@@ -11,7 +11,9 @@
 
 #define LG_ScreenW [UIScreen mainScreen].bounds.size.width
 #define LG_ScreenH [UIScreen mainScreen].bounds.size.height
+//ScrollView高度
 #define LG_scrollViewH 220
+//Segment高度
 #define LG_segmentH 40
 
 
@@ -34,19 +36,21 @@
 }
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
     
-    [self setSegement];
+    [super viewDidLoad];
+    //加载Segment
+    [self setSegment];
+    //加载ViewController
     [self addChildViewController];
+    //加载ScrollView
     [self setContentScrollView];
     
 }
 
--(void)setSegement {
+-(void)setSegment {
     
     [self buttonList];
-    
+    //初始化
     LGSegment *segment = [[LGSegment alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height - LG_scrollViewH - 50, self.view.frame.size.width, LG_segmentH)];
     segment.delegate = self;
     self.segment = segment;
@@ -55,18 +59,16 @@
     self.LGLayer = segment.LGLayer;
     
 }
-
+//加载ScrollView
 -(void)setContentScrollView {
     
     UIScrollView *sv = [[UIScrollView alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height - LG_scrollViewH, self.view.frame.size.width, LG_scrollViewH)];
-//    sv.backgroundColor = [UIColor greenColor];
     [self.view addSubview:sv];
-    
     sv.bounces = NO;
     sv.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
     sv.contentOffset = CGPointMake(0, 0);
     sv.pagingEnabled = YES;
-    sv.showsHorizontalScrollIndicator = YES;
+    sv.showsHorizontalScrollIndicator = NO;
     sv.scrollEnabled = YES;
     sv.userInteractionEnabled = YES;
     sv.delegate = self;
@@ -81,16 +83,17 @@
     sv.contentSize = CGSizeMake(3 * LG_ScreenW, 0);
     self.contentScrollView = sv;
 }
-//加载ViewController
+//加载3个ViewController
 -(void)addChildViewController{
+    
     UIViewController * vc1 = [[UIViewController alloc]init];
-    vc1.view.backgroundColor= [UIColor blueColor];
+    vc1.view.backgroundColor= [UIColor colorWithRed:80.0/255 green:227.0/255 blue:194.0/255 alpha:100];
     [self addChildViewController:vc1];
     UIViewController * vc2 = [[UIViewController alloc]init];
-    vc2.view.backgroundColor= [UIColor redColor];
+    vc2.view.backgroundColor= [UIColor colorWithRed:0.0/255 green:167.0/255 blue:210.0/255 alpha:100];
     [self addChildViewController:vc2];
     UIViewController * vc3 = [[UIViewController alloc]init];
-    vc3.view.backgroundColor= [UIColor grayColor];
+    vc3.view.backgroundColor= [UIColor colorWithRed:249.0/255 green:123.0/255 blue:134.0/255 alpha:100];
     [self addChildViewController:vc3];
 }
 
@@ -109,7 +112,7 @@
     
     CGFloat offsetX = scrollView.contentOffset.x;
     [self.segment moveToOffsetX:offsetX];
-
+    
 }
 
 @end

@@ -15,6 +15,7 @@
 		15869BC81C24E346009BDBD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15869BC61C24E346009BDBD1 /* LaunchScreen.storyboard */; };
 		15869BD31C24E346009BDBD1 /* LGSegmentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15869BD21C24E346009BDBD1 /* LGSegmentTests.m */; };
 		15869BDE1C24E346009BDBD1 /* LGSegmentUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15869BDD1C24E346009BDBD1 /* LGSegmentUITests.m */; };
+		15869BED1C24E3E0009BDBD1 /* LGSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 15869BEC1C24E3E0009BDBD1 /* LGSegment.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		15869BD91C24E346009BDBD1 /* LGSegmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LGSegmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		15869BDD1C24E346009BDBD1 /* LGSegmentUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LGSegmentUITests.m; sourceTree = "<group>"; };
 		15869BDF1C24E346009BDBD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15869BEB1C24E3E0009BDBD1 /* LGSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSegment.h; sourceTree = "<group>"; };
+		15869BEC1C24E3E0009BDBD1 /* LGSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSegment.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				15869BBC1C24E346009BDBD1 /* AppDelegate.m */,
 				15869BBE1C24E346009BDBD1 /* ViewController.h */,
 				15869BBF1C24E346009BDBD1 /* ViewController.m */,
+				15869BEB1C24E3E0009BDBD1 /* LGSegment.h */,
+				15869BEC1C24E3E0009BDBD1 /* LGSegment.m */,
 				15869BC11C24E346009BDBD1 /* Main.storyboard */,
 				15869BC41C24E346009BDBD1 /* Assets.xcassets */,
 				15869BC61C24E346009BDBD1 /* LaunchScreen.storyboard */,
@@ -273,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15869BED1C24E3E0009BDBD1 /* LGSegment.m in Sources */,
 				15869BC01C24E346009BDBD1 /* ViewController.m in Sources */,
 				15869BBD1C24E346009BDBD1 /* AppDelegate.m in Sources */,
 				15869BBA1C24E346009BDBD1 /* main.m in Sources */,
@@ -499,6 +505,7 @@
 				15869BE41C24E346009BDBD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		15869BE51C24E346009BDBD1 /* Build configuration list for PBXNativeTarget "LGSegmentTests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +514,7 @@
 				15869BE71C24E346009BDBD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		15869BE81C24E346009BDBD1 /* Build configuration list for PBXNativeTarget "LGSegmentUITests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +523,7 @@
 				15869BEA1C24E346009BDBD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
